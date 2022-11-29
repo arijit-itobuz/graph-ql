@@ -1,0 +1,31 @@
+https://countries.trevorblades.com/
+
+country query: 
+{
+  country(code: "IN") {
+    code
+    name
+    phone
+    capital
+    currency
+    continent {
+      code
+  		name
+      countries {
+        name
+        native
+      }
+    }
+  }
+}
+
+languages query:
+{
+  languages {
+    code
+    name
+    native
+    rtl
+  }
+}
+

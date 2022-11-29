@@ -1,0 +1,66 @@
+http://localhost:3001/
+
+users query:
+
+query Users {
+  users {
+    id
+    name
+    username
+    age
+    nationality
+    friends {
+      name
+      age
+    }
+  }
+}
+
+--------------------------------------------------------------------------------------------
+
+user query:
+
+query User($userId: ID!) {
+  user(id: $userId) {
+    id
+    name
+    username
+    age
+    nationality
+  }
+}
+
+{
+  "userId": "5"
+}
+
+--------------------------------------------------------------------------------------------
+
+movies query:
+
+query Movies {
+  movies {
+    name
+    id
+    year
+  }
+}
+
+--------------------------------------------------------------------------------------------
+
+movie query:
+
+query Movies($name: String!) {
+  movie(name: $name) {
+    id
+    name
+    year
+    adult
+  }
+}
+
+{
+  "name": "Dune"
+}
+
+--------------------------------------------------------------------------------------------
